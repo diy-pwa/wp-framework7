@@ -270,29 +270,16 @@
 
 <script>
     var $ = Dom7;
-    var globalTheme = 'light';
-    let theme = globalTheme;
 
     const app = new Framework7({
         el: '#app',
         theme: 'md',
-        routes: [
-            {
-                path: '/',
-                componentUrl: './index.html',
-            }
-        ]
-    })
-
-
-    const checkTheme = () => {
-        const isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-        if (isDark) {
-            $('html').removeClass('dark light').addClass("dark");
-        } else {
-            $('html').removeClass('dark light');
+        darkMode: "auto",
+        clicks: {
+            externalLinks: 'a',
         }
-    }
+
+    })
 
     // create searchbar
     const searchbar = app.searchbar.create({
@@ -306,7 +293,6 @@
         }
     });
 
-    checkTheme();
 </script>
 </body>
 
