@@ -1,0 +1,383 @@
+<link rel="stylesheet" href="https://unpkg.com/framework7/framework7-bundle.min.css">
+<link rel="stylesheet" href="https://unpkg.com/framework7-icons">
+<style>
+    :root {
+        --f7-bars-shadow-bottom-image: none;
+        --f7-searchbar-input-padding-horizontal: 24px;
+        --f7-navbar-margin: 12px;
+    }
+
+    .avatar {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+    }
+
+    .navbar {
+        margin: 24px var(--f7-navbar-margin);
+        width: calc(100% - 2 * var(--f7-navbar-margin));
+        border-radius: 12px;
+        overflow: hidden;
+        --f7-navbar-bg-color: #fff;
+    }
+
+    .dark .navbar {
+        --f7-navbar-bg-color: #000;
+    }
+
+    .navbar .title {
+        width: 100%;
+        margin: 0;
+    }
+
+    .page-content {
+        padding-top: 112px;
+    }
+
+    /* Limit resizable panel width */
+    .panel {
+        width: 75vw;
+    }
+
+    /* Demo Color Themes */
+    .demo-theme-picker {
+        cursor: pointer;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    .demo-theme-picker .checkbox {
+        position: absolute;
+        left: 10px;
+        bottom: 10px;
+    }
+
+    .wp-site-blocks {
+        height: 100%;
+    }
+</style>
+<div id="app">
+
+    <div class="panel panel-left panel-cover">
+        <div class="page page-accounts">
+            <div class="page-content">
+                <div class="block-title">my@email.com</div>
+                <div class="list no-chevron">
+                    <ul>
+                        <li>
+                            <a href="#" class="item-content item-link">
+                                <div class="item-media">
+                                    <i class="icon f7-icons">tray_fill</i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Inbox</div>
+                                    <div class="item-after">
+                                        <div class="badge">4</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="item-content item-link">
+                                <div class="item-media">
+                                    <i class="icon f7-icons">flag_fill</i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Flagged</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="item-content item-link">
+                                <div class="item-media">
+                                    <i class="icon f7-icons">doc_fill</i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Drafts</div>
+                                    <div class="item-after">
+                                        <div class="badge">1</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="item-content item-link">
+                                <div class="item-media">
+                                    <i class="icon f7-icons">paperplane_fill</i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Sent</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="item-content item-link">
+                                <div class="item-media">
+                                    <i class="icon f7-icons">exclamationmark_triangle_fill</i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Spam</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="item-content item-link">
+                                <div class="item-media">
+                                    <i class="icon f7-icons">trash_fill</i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Trash</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="item-content item-link">
+                                <div class="item-media">
+                                    <i class="icon f7-icons">archivebox_fill</i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Archive</div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="view view-main view-init">
+        <div class="page page-email-list">
+            <div class="navbar elevation-6">
+                <div class="navbar-bg"></div>
+                <div class="navbar-inner">
+                    <div class="left">
+                        <a class="link panel-open icon-only" data-panel="left">
+                            <i class="icon f7-icons">bars</i>
+                        </a>
+                    </div>
+                    <div class="title">
+                        <!-- Searchbar with auto init -->
+                        <form class="searchbar">
+                            <div class="searchbar-inner">
+                                <div class="searchbar-input-wrap">
+                                    <input type="search" placeholder="Search">
+                                    <i class="searchbar-icon"></i>
+                                    <span class="input-clear-button"></span>
+                                </div>
+                                <span class="searchbar-disable-button if-not-aurora">Cancel</span>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="right">
+                        <a class="link popover-open" href="#" data-popover=".profile-popover">
+                            <img src="https://i.pravatar.cc/56?u=9" class="avatar">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="page-content">
+                <!-- Searchbar backdrop -->
+                <div class="searchbar-backdrop"></div>
+                <!-- hide-on-search element -->
+                <div class="block block-title searchbar-hide-on-search">
+                    <p>INBOX</p>
+                </div>
+                <!-- search target list -->
+                <div class="list list-email media-list">
+                    <ul>
+                        <li>
+                            <label class="item-checkbox item-content">
+                                <input type="checkbox" name="demo-media-checkbox" value="1">
+                                <i class="icon icon-checkbox"></i>
+                                <div class="item-inner">
+                                    <div class="item-title-row">
+                                        <div class="item-title">Facebook</div>
+                                        <div class="item-after">17:14</div>
+                                    </div>
+                                    <div class="item-subtitle">New messages from John Doe</div>
+                                    <div class="item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Nulla sagittis tellus ut turpis condimentum, ut dignissim lacus tincidunt. Cras
+                                        dolor metus, ultrices condimentum sodales sit amet, pharetra sodales eros.
+                                        Phasellus vel felis tellus. Mauris rutrum ligula nec dapibus feugiat. In vel dui
+                                        laoreet, commodo augue id, pulvinar lacus.</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="item-checkbox item-content">
+                                <input type="checkbox" name="demo-media-checkbox" value="2">
+                                <i class="icon icon-checkbox"></i>
+                                <div class="item-inner">
+                                    <div class="item-title-row">
+                                        <div class="item-title">John Doe (via Twitter)</div>
+                                        <div class="item-after">17:11</div>
+                                    </div>
+                                    <div class="item-subtitle">John Doe (@_johndoe) mentioned you on Twitter!</div>
+                                    <div class="item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Nulla sagittis tellus ut turpis condimentum, ut dignissim lacus tincidunt. Cras
+                                        dolor metus, ultrices condimentum sodales sit amet, pharetra sodales eros.
+                                        Phasellus vel felis tellus. Mauris rutrum ligula nec dapibus feugiat. In vel dui
+                                        laoreet, commodo augue id, pulvinar lacus.</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="item-checkbox item-content">
+                                <input type="checkbox" name="demo-media-checkbox" value="3">
+                                <i class="icon icon-checkbox"></i>
+                                <div class="item-inner">
+                                    <div class="item-title-row">
+                                        <div class="item-title">Facebook</div>
+                                        <div class="item-after">16:48</div>
+                                    </div>
+                                    <div class="item-subtitle">New messages from John Doe</div>
+                                    <div class="item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Nulla sagittis tellus ut turpis condimentum, ut dignissim lacus tincidunt. Cras
+                                        dolor metus, ultrices condimentum sodales sit amet, pharetra sodales eros.
+                                        Phasellus vel felis tellus. Mauris rutrum ligula nec dapibus feugiat. In vel dui
+                                        laoreet, commodo augue id, pulvinar lacus.</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="item-checkbox item-content">
+                                <input type="checkbox" name="demo-media-checkbox" value="4">
+                                <i class="icon icon-checkbox"></i>
+                                <div class="item-inner">
+                                    <div class="item-title-row">
+                                        <div class="item-title">John Doe (via Twitter)</div>
+                                        <div class="item-after">15:32</div>
+                                    </div>
+                                    <div class="item-subtitle">John Doe (@_johndoe) mentioned you on Twitter!</div>
+                                    <div class="item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Nulla sagittis tellus ut turpis condimentum, ut dignissim lacus tincidunt. Cras
+                                        dolor metus, ultrices condimentum sodales sit amet, pharetra sodales eros.
+                                        Phasellus vel felis tellus. Mauris rutrum ligula nec dapibus feugiat. In vel dui
+                                        laoreet, commodo augue id, pulvinar lacus.</div>
+                                </div>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Nothing found message -->
+                <div class="block searchbar-not-found">
+                    <div class="block-inner">Nothing found</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Popovers -->
+<div class="popover profile-popover">
+    <div class="popover-inner">
+        <h3 class="text-align-center">John Doe</h3>
+        <div class="list no-hairlines no-hairlines-between">
+            <ul>
+                <li>
+                    <a href="#" class="item-link item-content">
+                        <div class="item-media">
+                            <i class="icon f7-icons">person_circle_fill</i>
+                        </div>
+                        <div class="item-inner">
+                            <div class="item-title">Profile</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="item-link item-content">
+                        <div class="item-media">
+                            <i class="icon f7-icons">gear_fill</i>
+                        </div>
+                        <div class="item-inner">
+                            <div class="item-title">User Settings</div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="list no-hairlines no-hairlines-between margin-bottom">
+            <ul>
+                <li>
+                    <a href="#" class="item-link item-content">
+                        <div class="item-media">
+                            <i class="icon f7-icons">square_arrow_right_fill</i>
+                        </div>
+                        <div class="item-inner">
+                            <div class="item-title">Logout</div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="block block-strong">
+            <p>Framework7 comes with 2 main layout themes: Light (default) and Dark:</p>
+            <div class="row">
+                <div class="col-50 bg-color-white demo-theme-picker" onclick="setLayoutTheme('light')">
+                    <label class="checkbox">
+                        <input id="light" type="checkbox">
+                        <i class="icon-checkbox"></i>
+                    </label>
+                </div>
+                <div class="col-50 bg-color-black demo-theme-picker" onclick="setLayoutTheme('dark')">
+                    <label class="checkbox">
+                        <input id="dark" type="checkbox">
+                        <i class="icon-checkbox"></i>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="https://unpkg.com/framework7/framework7-bundle.min.js"></script>
+
+<script>
+    var $ = Dom7;
+    var globalTheme = 'light';
+    let theme = globalTheme;
+
+    const app = new Framework7({
+        el: '#app',
+        theme: 'md',
+        routes: [
+            {
+                path: '/',
+                componentUrl: './index.html',
+            }
+        ]
+    })
+
+
+    const checkTheme = () => {
+        const isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (isDark) {
+            $('html').removeClass('dark light').addClass("dark");
+        } else {
+            $('html').removeClass('dark light');
+        }
+    }
+
+    // create searchbar
+    const searchbar = app.searchbar.create({
+        el: '.searchbar',
+        searchContainer: '.list-email',
+        searchIn: '.item-title',
+        on: {
+            search(sb, query, previousQuery) {
+                console.log(query, previousQuery);
+            }
+        }
+    });
+
+    checkTheme();
+</script>
+</body>
+
+</html>
