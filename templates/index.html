@@ -30,13 +30,9 @@
         margin: 0;
     }
 
-    .page-content {
-        padding-top: 112px;
-    }
-
     /* Limit resizable panel width */
     .panel {
-        width: 75vw;
+        max-width: 75vw;
     }
 
     /* Demo Color Themes */
@@ -173,11 +169,6 @@
                             </div>
                         </form>
                     </div>
-                    <div class="right">
-                        <a class="link popover-open" href="#" data-popover=".profile-popover">
-                            <img src="https://i.pravatar.cc/56?u=9" class="avatar">
-                        </a>
-                    </div>
                 </div>
             </div>
             <div class="page-content">
@@ -274,67 +265,6 @@
 </div>
 
 <!-- Popovers -->
-<div class="popover profile-popover">
-    <div class="popover-inner">
-        <h3 class="text-align-center">John Doe</h3>
-        <div class="list no-hairlines no-hairlines-between">
-            <ul>
-                <li>
-                    <a href="#" class="item-link item-content">
-                        <div class="item-media">
-                            <i class="icon f7-icons">person_circle_fill</i>
-                        </div>
-                        <div class="item-inner">
-                            <div class="item-title">Profile</div>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="item-link item-content">
-                        <div class="item-media">
-                            <i class="icon f7-icons">gear_fill</i>
-                        </div>
-                        <div class="item-inner">
-                            <div class="item-title">User Settings</div>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="list no-hairlines no-hairlines-between margin-bottom">
-            <ul>
-                <li>
-                    <a href="#" class="item-link item-content">
-                        <div class="item-media">
-                            <i class="icon f7-icons">square_arrow_right_fill</i>
-                        </div>
-                        <div class="item-inner">
-                            <div class="item-title">Logout</div>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="block block-strong">
-            <p>Framework7 comes with 2 main layout themes: Light (default) and Dark:</p>
-            <div class="row">
-                <div class="col-50 bg-color-white demo-theme-picker" onclick="setLayoutTheme('light')">
-                    <label class="checkbox">
-                        <input id="light" type="checkbox">
-                        <i class="icon-checkbox"></i>
-                    </label>
-                </div>
-                <div class="col-50 bg-color-black demo-theme-picker" onclick="setLayoutTheme('dark')">
-                    <label class="checkbox">
-                        <input id="dark" type="checkbox">
-                        <i class="icon-checkbox"></i>
-                    </label>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</div>
 
 <script src="https://unpkg.com/framework7/framework7-bundle.min.js"></script>
 
