@@ -65,3 +65,9 @@ Text Domain: framework7
 .wp-site-blocks {
     height: 100%;
 }
+
+footer p{
+    margin-right: 1em;
+    font-weight: 300;
+    font-size: 90%;
+}

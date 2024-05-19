@@ -89,29 +89,31 @@
 
     <div class="view view-main view-init">
         <div class="page page-email-list">
-            <div class="navbar elevation-6">
-                <div class="navbar-bg"></div>
-                <div class="navbar-inner">
-                    <div class="left">
-                        <a class="link panel-open icon-only" data-panel="left">
-                            <i class="icon f7-icons">bars</i>
-                        </a>
-                    </div>
-                    <div class="title">
-                        <!-- Searchbar with auto init -->
-                        <form class="searchbar">
-                            <div class="searchbar-inner">
-                                <div class="searchbar-input-wrap">
-                                    <input type="search" placeholder="Search">
-                                    <i class="searchbar-icon"></i>
-                                    <span class="input-clear-button"></span>
+            <header>
+                <div class="navbar elevation-6">
+                    <div class="navbar-bg"></div>
+                    <div class="navbar-inner">
+                        <div class="left">
+                            <a class="link panel-open icon-only" data-panel="left">
+                                <i class="icon f7-icons">bars</i>
+                            </a>
+                        </div>
+                        <div class="title">
+                            <!-- Searchbar with auto init -->
+                            <form class="searchbar">
+                                <div class="searchbar-inner">
+                                    <div class="searchbar-input-wrap">
+                                        <input type="search" placeholder="Search">
+                                        <i class="searchbar-icon"></i>
+                                        <span class="input-clear-button"></span>
+                                    </div>
+                                    <span class="searchbar-disable-button if-not-aurora">Cancel</span>
                                 </div>
-                                <span class="searchbar-disable-button if-not-aurora">Cancel</span>
-                            </div>
-                        </form>
+                            </form>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </header>
             <div class="page-content">
                 <!-- Searchbar backdrop -->
                 <div class="searchbar-backdrop"></div>
@@ -200,9 +202,11 @@
                 <div class="block searchbar-not-found">
                     <div class="block-inner">Nothing found</div>
                 </div>
+                <footer>
+                    <p class="float-right">&copy; diy-pwa team <x-year></x-year></p>
+                </footer>
             </div>
         </div>
     </div>
 </div>
-
 <!-- Popovers -->
