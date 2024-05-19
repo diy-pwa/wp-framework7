@@ -6,7 +6,7 @@ window.addEventListener('load', function () {
         theme: 'md',
         darkMode: "auto",
         clicks: {
-            externalLinks: 'a',
+            externalLinks: 'a:not(.panel-open)',
         }
 
     })

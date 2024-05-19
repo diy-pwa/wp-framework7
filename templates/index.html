@@ -1,212 +1,110 @@
 <div id="app">
-    <div class="panel panel-left panel-cover">
-        <div class="page page-accounts">
-            <div class="page-content">
-                <div class="block-title">my@email.com</div>
-                <div class="list no-chevron">
-                    <ul>
-                        <li>
-                            <a href="#" class="item-content item-link">
-                                <div class="item-media">
-                                    <i class="icon f7-icons">tray_fill</i>
-                                </div>
-                                <div class="item-inner">
-                                    <div class="item-title">Inbox</div>
-                                    <div class="item-after">
-                                        <div class="badge">4</div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="item-content item-link">
-                                <div class="item-media">
-                                    <i class="icon f7-icons">flag_fill</i>
-                                </div>
-                                <div class="item-inner">
-                                    <div class="item-title">Flagged</div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="item-content item-link">
-                                <div class="item-media">
-                                    <i class="icon f7-icons">doc_fill</i>
-                                </div>
-                                <div class="item-inner">
-                                    <div class="item-title">Drafts</div>
-                                    <div class="item-after">
-                                        <div class="badge">1</div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="item-content item-link">
-                                <div class="item-media">
-                                    <i class="icon f7-icons">paperplane_fill</i>
-                                </div>
-                                <div class="item-inner">
-                                    <div class="item-title">Sent</div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="item-content item-link">
-                                <div class="item-media">
-                                    <i class="icon f7-icons">exclamationmark_triangle_fill</i>
-                                </div>
-                                <div class="item-inner">
-                                    <div class="item-title">Spam</div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="item-content item-link">
-                                <div class="item-media">
-                                    <i class="icon f7-icons">trash_fill</i>
-                                </div>
-                                <div class="item-inner">
-                                    <div class="item-title">Trash</div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="item-content item-link">
-                                <div class="item-media">
-                                    <i class="icon f7-icons">archivebox_fill</i>
-                                </div>
-                                <div class="item-inner">
-                                    <div class="item-title">Archive</div>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <div class="view view-main view-init">
         <div class="page page-email-list">
-            <header>
-                <div class="navbar elevation-6">
-                    <div class="navbar-bg"></div>
-                    <div class="navbar-inner">
-                        <div class="left">
-                            <a class="link panel-open icon-only" data-panel="left">
-                                <i class="icon f7-icons">bars</i>
-                            </a>
-                        </div>
-                        <div class="title">
-                            <!-- Searchbar with auto init -->
-                            <form class="searchbar">
-                                <div class="searchbar-inner">
-                                    <div class="searchbar-input-wrap">
-                                        <input type="search" placeholder="Search">
-                                        <i class="searchbar-icon"></i>
-                                        <span class="input-clear-button"></span>
-                                    </div>
-                                    <span class="searchbar-disable-button if-not-aurora">Cancel</span>
-                                </div>
-                            </form>
-                        </div>
+            <!-- wp:template-part {"slug":"header"} /-->
+            <!-- wp:group {"tagName":"main","layout":{"type":"constrained"}} -->
+            <main>
+                <div class="page-content">
+                    <!-- Searchbar backdrop -->
+                    <div class="searchbar-backdrop"></div>
+                    <!-- hide-on-search element -->
+                    <div class="block block-title searchbar-hide-on-search">
+                        <p>INBOX</p>
                     </div>
-                </div>
-            </header>
-            <div class="page-content">
-                <!-- Searchbar backdrop -->
-                <div class="searchbar-backdrop"></div>
-                <!-- hide-on-search element -->
-                <div class="block block-title searchbar-hide-on-search">
-                    <p>INBOX</p>
-                </div>
-                <!-- search target list -->
-                <div class="list list-email media-list">
-                    <ul>
-                        <li>
-                            <label class="item-checkbox item-content">
-                                <input type="checkbox" name="demo-media-checkbox" value="1">
-                                <i class="icon icon-checkbox"></i>
-                                <div class="item-inner">
-                                    <div class="item-title-row">
-                                        <div class="item-title">Facebook</div>
-                                        <div class="item-after">17:14</div>
+                    <!-- search target list -->
+                    <div class="list list-email media-list">
+                        <ul>
+                            <li>
+                                <label class="item-checkbox item-content">
+                                    <input type="checkbox" name="demo-media-checkbox" value="1">
+                                    <i class="icon icon-checkbox"></i>
+                                    <div class="item-inner">
+                                        <div class="item-title-row">
+                                            <div class="item-title">Facebook</div>
+                                            <div class="item-after">17:14</div>
+                                        </div>
+                                        <div class="item-subtitle">New messages from John Doe</div>
+                                        <div class="item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                            Nulla sagittis tellus ut turpis condimentum, ut dignissim lacus tincidunt.
+                                            Cras
+                                            dolor metus, ultrices condimentum sodales sit amet, pharetra sodales eros.
+                                            Phasellus vel felis tellus. Mauris rutrum ligula nec dapibus feugiat. In vel
+                                            dui
+                                            laoreet, commodo augue id, pulvinar lacus.</div>
                                     </div>
-                                    <div class="item-subtitle">New messages from John Doe</div>
-                                    <div class="item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                        Nulla sagittis tellus ut turpis condimentum, ut dignissim lacus tincidunt. Cras
-                                        dolor metus, ultrices condimentum sodales sit amet, pharetra sodales eros.
-                                        Phasellus vel felis tellus. Mauris rutrum ligula nec dapibus feugiat. In vel dui
-                                        laoreet, commodo augue id, pulvinar lacus.</div>
-                                </div>
-                            </label>
-                        </li>
-                        <li>
-                            <label class="item-checkbox item-content">
-                                <input type="checkbox" name="demo-media-checkbox" value="2">
-                                <i class="icon icon-checkbox"></i>
-                                <div class="item-inner">
-                                    <div class="item-title-row">
-                                        <div class="item-title">John Doe (via Twitter)</div>
-                                        <div class="item-after">17:11</div>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="item-checkbox item-content">
+                                    <input type="checkbox" name="demo-media-checkbox" value="2">
+                                    <i class="icon icon-checkbox"></i>
+                                    <div class="item-inner">
+                                        <div class="item-title-row">
+                                            <div class="item-title">John Doe (via Twitter)</div>
+                                            <div class="item-after">17:11</div>
+                                        </div>
+                                        <div class="item-subtitle">John Doe (@_johndoe) mentioned you on Twitter!</div>
+                                        <div class="item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                            Nulla sagittis tellus ut turpis condimentum, ut dignissim lacus tincidunt.
+                                            Cras
+                                            dolor metus, ultrices condimentum sodales sit amet, pharetra sodales eros.
+                                            Phasellus vel felis tellus. Mauris rutrum ligula nec dapibus feugiat. In vel
+                                            dui
+                                            laoreet, commodo augue id, pulvinar lacus.</div>
                                     </div>
-                                    <div class="item-subtitle">John Doe (@_johndoe) mentioned you on Twitter!</div>
-                                    <div class="item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                        Nulla sagittis tellus ut turpis condimentum, ut dignissim lacus tincidunt. Cras
-                                        dolor metus, ultrices condimentum sodales sit amet, pharetra sodales eros.
-                                        Phasellus vel felis tellus. Mauris rutrum ligula nec dapibus feugiat. In vel dui
-                                        laoreet, commodo augue id, pulvinar lacus.</div>
-                                </div>
-                            </label>
-                        </li>
-                        <li>
-                            <label class="item-checkbox item-content">
-                                <input type="checkbox" name="demo-media-checkbox" value="3">
-                                <i class="icon icon-checkbox"></i>
-                                <div class="item-inner">
-                                    <div class="item-title-row">
-                                        <div class="item-title">Facebook</div>
-                                        <div class="item-after">16:48</div>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="item-checkbox item-content">
+                                    <input type="checkbox" name="demo-media-checkbox" value="3">
+                                    <i class="icon icon-checkbox"></i>
+                                    <div class="item-inner">
+                                        <div class="item-title-row">
+                                            <div class="item-title">Facebook</div>
+                                            <div class="item-after">16:48</div>
+                                        </div>
+                                        <div class="item-subtitle">New messages from John Doe</div>
+                                        <div class="item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                            Nulla sagittis tellus ut turpis condimentum, ut dignissim lacus tincidunt.
+                                            Cras
+                                            dolor metus, ultrices condimentum sodales sit amet, pharetra sodales eros.
+                                            Phasellus vel felis tellus. Mauris rutrum ligula nec dapibus feugiat. In vel
+                                            dui
+                                            laoreet, commodo augue id, pulvinar lacus.</div>
                                     </div>
-                                    <div class="item-subtitle">New messages from John Doe</div>
-                                    <div class="item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                        Nulla sagittis tellus ut turpis condimentum, ut dignissim lacus tincidunt. Cras
-                                        dolor metus, ultrices condimentum sodales sit amet, pharetra sodales eros.
-                                        Phasellus vel felis tellus. Mauris rutrum ligula nec dapibus feugiat. In vel dui
-                                        laoreet, commodo augue id, pulvinar lacus.</div>
-                                </div>
-                            </label>
-                        </li>
-                        <li>
-                            <label class="item-checkbox item-content">
-                                <input type="checkbox" name="demo-media-checkbox" value="4">
-                                <i class="icon icon-checkbox"></i>
-                                <div class="item-inner">
-                                    <div class="item-title-row">
-                                        <div class="item-title">John Doe (via Twitter)</div>
-                                        <div class="item-after">15:32</div>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="item-checkbox item-content">
+                                    <input type="checkbox" name="demo-media-checkbox" value="4">
+                                    <i class="icon icon-checkbox"></i>
+                                    <div class="item-inner">
+                                        <div class="item-title-row">
+                                            <div class="item-title">John Doe (via Twitter)</div>
+                                            <div class="item-after">15:32</div>
+                                        </div>
+                                        <div class="item-subtitle">John Doe (@_johndoe) mentioned you on Twitter!</div>
+                                        <div class="item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                            Nulla sagittis tellus ut turpis condimentum, ut dignissim lacus tincidunt.
+                                            Cras
+                                            dolor metus, ultrices condimentum sodales sit amet, pharetra sodales eros.
+                                            Phasellus vel felis tellus. Mauris rutrum ligula nec dapibus feugiat. In vel
+                                            dui
+                                            laoreet, commodo augue id, pulvinar lacus.</div>
                                     </div>
-                                    <div class="item-subtitle">John Doe (@_johndoe) mentioned you on Twitter!</div>
-                                    <div class="item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                        Nulla sagittis tellus ut turpis condimentum, ut dignissim lacus tincidunt. Cras
-                                        dolor metus, ultrices condimentum sodales sit amet, pharetra sodales eros.
-                                        Phasellus vel felis tellus. Mauris rutrum ligula nec dapibus feugiat. In vel dui
-                                        laoreet, commodo augue id, pulvinar lacus.</div>
-                                </div>
-                            </label>
-                        </li>
-                    </ul>
-                </div>
-                <!-- Nothing found message -->
-                <div class="block searchbar-not-found">
-                    <div class="block-inner">Nothing found</div>
-                </div>
-                <footer>
-                    <p class="float-right">&copy; diy-pwa team <x-year></x-year></p>
-                </footer>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+            </main>
+            <!-- /wp:group -->
+            <!-- Nothing found message -->
+            <div class="block searchbar-not-found">
+                <div class="block-inner">Nothing found</div>
             </div>
+            <!-- wp:template-part {"slug":"footer"} /-->
         </div>
     </div>
+</div>
 </div>
 <!-- Popovers -->

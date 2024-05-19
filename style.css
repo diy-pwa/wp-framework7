@@ -71,3 +71,7 @@ footer p{
     font-weight: 300;
     font-size: 90%;
 }
+
+.not-found-block{
+    padding: 1em;
+}
